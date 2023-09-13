@@ -1,35 +1,26 @@
 let player = 1
-let box1 = 0
-let box2 = 0
-let box3 = 0
-let box4 = 0
-let box5 = 0
-let box6 = 0
-let box7 = 0
-let box8 = 0
-let box9 = 0
+let box1, box2, box3, box4, box5, box6, box7, box8, box9 = 0
 
 function setup() {
 createCanvas(1000,1000);
 frameRate(10)
-background(220);
-rect(125,125,250,250);
-rect(125,375,250,250);
-rect(125,625,250,250);
-rect(375,125,250,250);
-rect(375,375,250,250);
-rect(375,625,250,250);
-rect(625,125,250,250);
-rect(625,375,250,250);
-rect(625,625,250,250);
+
 }
 
 function draw() {
 
   text('mouse Y:' + mouseY, 20, 40)
   text(('mouse x:' + mouseX), 20, 20) //remove later
-
-
+  background(220);
+  rect(125,125,250,250);
+  rect(125,375,250,250);
+  rect(125,625,250,250);
+  rect(375,125,250,250);
+  rect(375,375,250,250);
+  rect(375,625,250,250);
+  rect(625,125,250,250);
+  rect(625,375,250,250);
+  rect(625,625,250,250);
 }
 function mousePressed() {
   
