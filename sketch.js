@@ -85,6 +85,63 @@ function draw() {
     circle2(posX = 750, posY = 750) //box9 pos
   }
 
+
+  // wins player 1
+  if(box1 == 1 && box2 == 1 && box3 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box4 == 1 && box5 == 1 && box6 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box7 == 1 && box8 == 1 && box9 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box1 == 1 && box4 == 1 && box7 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box1 == 1 && box4 == 1 && box7 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box2 == 1 && box5 == 1 && box8 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box3 == 1 && box6 == 1 && box9 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box1 == 1 && box5 == 1 && box9 == 1) {
+    console.log('player 1 wins!')
+  }
+  if(box7 == 1 && box5 == 1 && box3 == 1) {
+    console.log('player 1 wins!')
+  }
+  // wins player 2
+  if(box1 == 2 && box2 == 2 && box3 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box4 == 2 && box5 == 2 && box6 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box7 == 2 && box8 == 2 && box9 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box1 == 2 && box4 == 2 && box7 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box1 == 2 && box4 == 2 && box7 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box2 == 2 && box5 == 2 && box8 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box3 == 2 && box6 == 2 && box9 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box1 == 2 && box5 == 2 && box9 == 2) {
+    console.log('player 2 wins!')
+  }
+  if(box7 == 2 && box5 == 2 && box3 == 2) {
+    console.log('player 2 wins!')
+  }
 }
 function mousePressed() {
   
