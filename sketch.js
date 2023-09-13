@@ -8,10 +8,9 @@ frameRate(10)
 }
 
 function draw() {
-
-  text('mouse Y:' + mouseY, 20, 40)
-  text(('mouse x:' + mouseX), 20, 20) //remove later
   background(220);
+  text(('mouse Y:' + mouseY), 20, 40) //remove later
+  text(('mouse x:' + mouseX), 20, 20) //remove later
   rect(125,125,250,250);
   rect(125,375,250,250);
   rect(125,625,250,250);
@@ -21,6 +20,15 @@ function draw() {
   rect(625,125,250,250);
   rect(625,375,250,250);
   rect(625,625,250,250);
+  cross(posX = 175, posY = 175) //box1 pos 
+  cross(posX = 425, posY = 175) //box2 pos
+  cross(posX = 675, posY = 175) //box3 pos 
+  cross(posX = 175, posY = 425) //box4 pos
+  cross(posX = 425, posY = 425) //box5 pos 
+  cross(posX = 675, posY = 425) //box6 pos
+  cross(posX = 175, posY = 675) //box7 pos 
+  cross(posX = 425, posY = 675) //box8 pos
+  cross(posX = 675, posY = 675) //box9 pos 
 }
 function mousePressed() {
   
@@ -150,4 +158,9 @@ function mousePressed() {
       }
     }
   } 
+}
+function cross() {
+  strokeWeight(5)  
+  line(0 + posX,0 + posY,150 + posX,150 + posY)
+  line(0 + posX,150 + posY,150 + posX,0 +posY)
 }
