@@ -1,13 +1,11 @@
 let player = 1
 let box1 = 0, box2 = 0, box3 = 0, box4 = 0, box5 = 0, box6 = 0, box7 = 0, box8 = 0, box9 = 0
 let turns = 0
-
 function setup() {
   createCanvas(1000, 1000);
   frameRate(10)
   strokeWeight(5)
 }
-
 function draw() {
   background(220);
   textSize(50)
@@ -123,7 +121,6 @@ function draw() {
     player = 3
     line(170, 830, 825, 175)
   }
-
   // wins player 2
   if (box1 == 2 && box2 == 2 && box3 == 2) {
     player = 4
@@ -299,7 +296,7 @@ function circle2() {
   fill('black')
 }
 function keyPressed() {
-  if (keyCode === 82 && (player == 3 || player == 4 || player == 5)) {
+  if (keyCode == 82 && player >= 3) {
     box1 = 0
     box2 = 0
     box3 = 0
