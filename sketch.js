@@ -22,8 +22,8 @@ function draw() {
   if (player == 3) {
     text('player 1 wins!')
   }
-  if (player == 3) {
-    text('player 1 wins!')
+  if (player == 4) {
+    text('player 2 wins!')
   }
   fill('white')
   rect(125, 125, 250, 250); rect(125, 375, 250, 250); rect(125, 625, 250, 250); rect(375, 125, 250, 250); rect(375, 375, 250, 250); rect(375, 625, 250, 250); rect(625, 125, 250, 250); rect(625, 375, 250, 250); rect(625, 625, 250, 250);
@@ -122,39 +122,30 @@ function draw() {
 
   // wins player 2
   if (box1 == 2 && box2 == 2 && box3 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box4 == 2 && box5 == 2 && box6 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box7 == 2 && box8 == 2 && box9 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box1 == 2 && box4 == 2 && box7 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box1 == 2 && box4 == 2 && box7 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box2 == 2 && box5 == 2 && box8 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box3 == 2 && box6 == 2 && box9 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box1 == 2 && box5 == 2 && box9 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
   if (box7 == 2 && box5 == 2 && box3 == 2) {
-    console.log('player 2 wins!')
     player = 4
   }
 }
