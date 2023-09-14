@@ -1,5 +1,6 @@
 let player = 1
 let box1 = 0, box2 = 0, box3 = 0, box4 = 0, box5 = 0, box6 = 0, box7 = 0, box8 = 0, box9 = 0
+let turns = 0
 
 function setup() {
   createCanvas(1000, 1000);
@@ -22,9 +23,15 @@ function draw() {
   }
   if (player == 3) {
     text('Player 1 wins!', 430, 110)
+    text('Press R to reset!', 420,950)
   }
   if (player == 4) {
     text('Player 2 wins!', 430, 110)
+    text('Press R to reset!', 420,950)
+  }
+  if (player == 5) {
+    text('Tie!', 450, 110)
+    text('Press R to reset!', 420,950)
   }
   fill('white')
   rect(125, 125, 250, 250); rect(125, 375, 250, 250); rect(125, 625, 250, 250); rect(375, 125, 250, 250); rect(375, 375, 250, 250); rect(375, 625, 250, 250); rect(625, 125, 250, 250); rect(625, 375, 250, 250); rect(625, 625, 250, 250);
@@ -82,73 +89,76 @@ function draw() {
   if (box9 == 2) {
     circle2(posX = 750, posY = 750) //box9 pos
   }
-strokeWeight(20)
+  strokeWeight(20)
   // wins player 1
   if (box1 == 1 && box2 == 1 && box3 == 1) {
     player = 3
-    line(180,250,820,250)
+    line(180, 250, 820, 250)
   }
   if (box4 == 1 && box5 == 1 && box6 == 1) {
     player = 3
-    line(180,500,820,500)
+    line(180, 500, 820, 500)
   }
   if (box7 == 1 && box8 == 1 && box9 == 1) {
     player = 3
-    line(180,750,820,750)
+    line(180, 750, 820, 750)
   }
   if (box1 == 1 && box4 == 1 && box7 == 1) {
     player = 3
-    line(250,170,250,830)
+    line(250, 170, 250, 830)
   }
   if (box2 == 1 && box5 == 1 && box8 == 1) {
     player = 3
-    line(500,170,500,830)
+    line(500, 170, 500, 830)
   }
   if (box3 == 1 && box6 == 1 && box9 == 1) {
     player = 3
-    line(750,170,750,830)
+    line(750, 170, 750, 830)
   }
   if (box1 == 1 && box5 == 1 && box9 == 1) {
     player = 3
-    line(170,170,820,820)
+    line(170, 170, 820, 820)
   }
   if (box7 == 1 && box5 == 1 && box3 == 1) {
     player = 3
-    line(170,830,825,175)
+    line(170, 830, 825, 175)
   }
 
   // wins player 2
   if (box1 == 2 && box2 == 2 && box3 == 2) {
     player = 4
-    line(180,250,820,250)
+    line(180, 250, 820, 250)
   }
   if (box4 == 2 && box5 == 2 && box6 == 2) {
     player = 4
-    line(180,500,820,500)
+    line(180, 500, 820, 500)
   }
   if (box7 == 2 && box8 == 2 && box9 == 2) {
     player = 4
-    line(180,750,820,750)
+    line(180, 750, 820, 750)
   }
   if (box1 == 2 && box4 == 2 && box7 == 2) {
     player = 4
-    line(250,170,250,830)
+    line(250, 170, 250, 830)
   }
   if (box2 == 2 && box5 == 2 && box8 == 2) {
     player = 4
-    line(500,170,500,830)
+    line(500, 170, 500, 830)
   }
   if (box3 == 2 && box6 == 2 && box9 == 2) {
     player = 4
-    line(750,170,750,830)
+    line(750, 170, 750, 830)
   }
   if (box1 == 2 && box5 == 2 && box9 == 2) {
     player = 4
-    line(170,170,820,820)
+    line(170, 170, 820, 820)
   }
   if (box7 == 2 && box5 == 2 && box3 == 2) {
     player = 4
-    line(170,830,825,175)
+    line(170, 830, 825, 175)
+  }
+  if (turns == 9 && player <= 2) {
+    player = 5
   }
 }
 function mousePressed() {
@@ -157,10 +167,12 @@ function mousePressed() {
       if (player == 1) {
         box1 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box1 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -169,10 +181,12 @@ function mousePressed() {
       if (player == 1) {
         box2 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box2 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -181,10 +195,12 @@ function mousePressed() {
       if (player == 1) {
         box3 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box3 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -193,10 +209,12 @@ function mousePressed() {
       if (player == 1) {
         box4 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box4 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -205,10 +223,12 @@ function mousePressed() {
       if (player == 1) {
         box5 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box5 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -217,10 +237,12 @@ function mousePressed() {
       if (player == 1) {
         box6 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box6 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -229,10 +251,12 @@ function mousePressed() {
       if (player == 1) {
         box7 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box7 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -241,10 +265,12 @@ function mousePressed() {
       if (player == 1) {
         box8 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box8 = 2
         player = 1
+        turns += 1
       }
     }
   }
@@ -253,11 +279,12 @@ function mousePressed() {
       if (player == 1) {
         box9 = 1
         player = 2
+        turns += 1
       }
       else if (player == 2) {
         box9 = 2
         player = 1
-
+        turns += 1
       }
     }
   }
@@ -270,4 +297,24 @@ function circle2() {
   noFill()
   circle(0 + posX, 0 + posY, 200)
   fill('black')
+}
+function keyPressed() {
+  if (keyCode === 82 && (player == 3 || player == 4 || player == 5)) {
+    box1 = 0
+    box2 = 0
+    box3 = 0
+    box4 = 0
+    box5 = 0
+    box6 = 0
+    box7 = 0
+    box8 = 0
+    box9 = 0
+    turns = 0
+    if (player == 3) {
+      player = 2
+    }
+    if (player == 4) {
+      player = 1
+    }
+  }
 }
