@@ -9,6 +9,17 @@ strokeWeight(5)
 
 function draw() {
   background(220);
+  textSize(50)
+  fill('black')
+  text("Tic Tac Toe", 370, 75)
+  textSize(20)
+  if(player == 1) {
+    text("Player 1 (cross)", 430,110)
+  }
+  if(player == 2) {
+    text("Player 2 (circle)",430,110)
+  }
+  fill('white')
   rect(125,125,250,250); rect(125,375,250,250); rect(125,625,250,250); rect(375,125,250,250); rect(375,375,250,250); rect(375,625,250,250); rect(625,125,250,250); rect(625,375,250,250); rect(625,625,250,250);
   if(box1 == 1) {
     cross(posX = 175, posY = 175) //box1 pos 
@@ -68,59 +79,77 @@ function draw() {
   // wins player 1
   if(box1 == 1 && box2 == 1 && box3 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box4 == 1 && box5 == 1 && box6 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box7 == 1 && box8 == 1 && box9 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box1 == 1 && box4 == 1 && box7 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box1 == 1 && box4 == 1 && box7 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box2 == 1 && box5 == 1 && box8 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box3 == 1 && box6 == 1 && box9 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box1 == 1 && box5 == 1 && box9 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
   if(box7 == 1 && box5 == 1 && box3 == 1) {
     console.log('player 1 wins!')
+    player = 0
   }
 
   // wins player 2
   if(box1 == 2 && box2 == 2 && box3 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box4 == 2 && box5 == 2 && box6 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box7 == 2 && box8 == 2 && box9 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box1 == 2 && box4 == 2 && box7 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box1 == 2 && box4 == 2 && box7 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box2 == 2 && box5 == 2 && box8 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box3 == 2 && box6 == 2 && box9 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box1 == 2 && box5 == 2 && box9 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
   if(box7 == 2 && box5 == 2 && box3 == 2) {
     console.log('player 2 wins!')
+    player = 0
   }
 }
 function mousePressed() {
@@ -237,12 +266,12 @@ function mousePressed() {
     }
   } 
 }
-function cross() {  
+function cross() { 
   line(0 + posX,0 + posY,150 + posX,150 + posY)
   line(0 + posX,150 + posY,150 + posX,0 +posY)
 }
 function circle2() {
   noFill()
   circle(0 + posX, 0 +posY, 200)
-  fill('white')
+  fill('black')
 }
