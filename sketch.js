@@ -10,6 +10,7 @@ function setup() {
 function draw() {
   background(220);
   textSize(50)
+  strokeWeight(5)
   fill('black')
   text("Tic Tac Toe", 370, 75)
   textSize(20)
@@ -20,10 +21,10 @@ function draw() {
     text("Player 2 (circle)", 430, 110)
   }
   if (player == 3) {
-    text('player 1 wins!')
+    text('Player 1 wins!', 430, 110)
   }
   if (player == 4) {
-    text('player 2 wins!')
+    text('Player 2 wins!', 430, 110)
   }
   fill('white')
   rect(125, 125, 250, 250); rect(125, 375, 250, 250); rect(125, 625, 250, 250); rect(375, 125, 250, 250); rect(375, 375, 250, 250); rect(375, 625, 250, 250); rect(625, 125, 250, 250); rect(625, 375, 250, 250); rect(625, 625, 250, 250);
@@ -81,77 +82,77 @@ function draw() {
   if (box9 == 2) {
     circle2(posX = 750, posY = 750) //box9 pos
   }
-
+strokeWeight(20)
   // wins player 1
   if (box1 == 1 && box2 == 1 && box3 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(180,250,820,250)
   }
   if (box4 == 1 && box5 == 1 && box6 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(180,500,820,500)
   }
   if (box7 == 1 && box8 == 1 && box9 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(180,750,820,750)
   }
   if (box1 == 1 && box4 == 1 && box7 == 1) {
-    console.log('player 1 wins!')
     player = 3
-  }
-  if (box1 == 1 && box4 == 1 && box7 == 1) {
-    console.log('player 1 wins!')
-    player = 3
+    line(250,170,250,830)
   }
   if (box2 == 1 && box5 == 1 && box8 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(500,170,500,830)
   }
   if (box3 == 1 && box6 == 1 && box9 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(750,170,750,830)
   }
   if (box1 == 1 && box5 == 1 && box9 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(170,170,820,820)
   }
   if (box7 == 1 && box5 == 1 && box3 == 1) {
-    console.log('player 1 wins!')
     player = 3
+    line(170,830,825,175)
   }
 
   // wins player 2
   if (box1 == 2 && box2 == 2 && box3 == 2) {
     player = 4
+    line(180,250,820,250)
   }
   if (box4 == 2 && box5 == 2 && box6 == 2) {
     player = 4
+    line(180,500,820,500)
   }
   if (box7 == 2 && box8 == 2 && box9 == 2) {
     player = 4
+    line(180,750,820,750)
   }
   if (box1 == 2 && box4 == 2 && box7 == 2) {
     player = 4
-  }
-  if (box1 == 2 && box4 == 2 && box7 == 2) {
-    player = 4
+    line(250,170,250,830)
   }
   if (box2 == 2 && box5 == 2 && box8 == 2) {
     player = 4
+    line(500,170,500,830)
   }
   if (box3 == 2 && box6 == 2 && box9 == 2) {
     player = 4
+    line(750,170,750,830)
   }
   if (box1 == 2 && box5 == 2 && box9 == 2) {
     player = 4
+    line(170,170,820,820)
   }
   if (box7 == 2 && box5 == 2 && box3 == 2) {
     player = 4
+    line(170,830,825,175)
   }
 }
 function mousePressed() {
   if (mouseX >= 150 && mouseX < 375 && mouseY > 125 && mouseY < 375) { //box 1 detection
-    console.log('box 1')
     if (box1 == 0) {
       if (player == 1) {
         box1 = 1
@@ -164,7 +165,6 @@ function mousePressed() {
     }
   }
   if (mouseX >= 375 && mouseX < 625 && mouseY > 125 && mouseY < 375) { //box 2 detection 
-    console.log('box 2')
     if (box2 == 0) {
       if (player == 1) {
         box2 = 1
@@ -177,7 +177,6 @@ function mousePressed() {
     }
   }
   if (mouseX >= 625 && mouseX < 875 && mouseY >= 125 && mouseY < 375) { //box 3 detection
-    console.log('box 3')
     if (box3 == 0) {
       if (player == 1) {
         box3 = 1
