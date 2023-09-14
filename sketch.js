@@ -1,9 +1,9 @@
 let player = 1 //to keep track of which player it is and at the same time used for if someone wins or ties
 let box1 = 0, box2 = 0, box3 = 0, box4 = 0, box5 = 0, box6 = 0, box7 = 0, box8 = 0, box9 = 0 //9 vars for the boxes
 let turns = 0 //used to identify a tie 
-let player1wins = 0
-let player2wins = 0
-let gamecount = 1
+let player1wins = 0 //keeps count how many times player 1 has won
+let player2wins = 0 //keeps count how many times player 2 has won
+let gamecount = 1 //keeps count how many games have been played
 function setup() { createCanvas(1000, 1000); } //creates the canvas itself
 function draw() {
   background(220);
